@@ -4,10 +4,8 @@ import "./Nav.css";
 const MainLayout = ({ children }) => {
   const navLinks = (
     <>
-      <NavLink to="/about" className="">
-        {" "}
-        About{" "}
-      </NavLink>
+      <NavLink to="/"> Home </NavLink>
+      <NavLink to="/about"> About </NavLink>
 
       <NavLink to="/contact"> Contact </NavLink>
 
