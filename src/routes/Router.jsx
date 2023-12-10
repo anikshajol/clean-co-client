@@ -4,6 +4,8 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import AdminLayout from "../components/layouts/AdminLayout";
+import AddService from "../pages/AddService";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const routes = createBrowserRouter([
   {
     path: "/register",
     element: <Register></Register>,
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout></AdminLayout>,
+    children: [
+      {
+        path: "addService",
+        element: <AddService></AddService>,
+      },
+    ],
   },
 ]);
 
