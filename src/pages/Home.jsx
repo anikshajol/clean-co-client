@@ -1,21 +1,28 @@
+import Container from "../components/ui/Container";
+
 const Home = () => {
   return (
     <>
-      <div className="w-full max-w-[1200px] mx-auto px-4 ">
+      <Container>
         <div
-          className="flex flex-col md:flex-row items-center
-         md:justify-normal"
+          className="flex my-32 flex-col md:flex-row items-center 
+         md:items-start"
         >
-          <div>
-            <h2>Quality cleaning for your home</h2>
-            <p>
+          <div className="">
+            <h2 className="text-7xl font-bold">
+              Quality cleaning <br />{" "}
+              <span className="text-green-700"> for your home</span>
+            </h2>
+            <p className="mt-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
               commodi sit corrupti sint quo et dicta accusamus reprehenderit
               omnis
             </p>
-            <div>
-              <button className="btn btn-primary">Book a Service</button>
-              <button className="btn btn-secondary">Read More</button>
+            <div className="mt-6">
+              <button className="btn bg-[green] text-white">
+                Book a Service
+              </button>
+              <button className="btn btn-ghost">Read More</button>
             </div>
             <div className="divider"></div>
             <div>
@@ -48,14 +55,15 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
+          <div className="h-[400px] bg-red-500 rounded-lg overflow-hidden">
             <img
+              className="w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvdHJhaXR8ZW58MHx8MHx8fDA%3D"
               alt=""
             />
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };
