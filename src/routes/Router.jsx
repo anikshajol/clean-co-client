@@ -3,10 +3,10 @@ import App from "../App";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
-import Register from "../pages/Register";
 import AdminLayout from "../components/layouts/AdminLayout";
 import AddService from "../pages/AddService";
 import Home from "../pages/Home";
+import Registration from "../pages/Registration";
 
 const routes = createBrowserRouter([
   {
@@ -34,7 +34,7 @@ const routes = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <Register></Register>,
+    element: <Registration></Registration>,
   },
   {
     path: "/admin",
