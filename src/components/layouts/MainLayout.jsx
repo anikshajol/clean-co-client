@@ -1,7 +1,16 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
+import useAuth from "../../hooks/useAuth";
 
 const MainLayout = ({ children }) => {
+  const { user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout()
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
   const navLinks = (
     <>
       <NavLink to="/"> Home </NavLink>
@@ -9,9 +18,18 @@ const MainLayout = ({ children }) => {
 
       <NavLink to="/contact"> Contact </NavLink>
 
-      <NavLink to="/login"> Login </NavLink>
+      {!user ? (
+        <>
+          <NavLink to="/login"> Login </NavLink>
 
-      <NavLink to="/register"> Register </NavLink>
+          <NavLink to="/register"> Register </NavLink>
+        </>
+      ) : (
+        <NavLink onClick={handleLogout} to="" className="bg-[black] text-white">
+          {" "}
+          Logout
+        </NavLink>
+      )}
     </>
   );
 

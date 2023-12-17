@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ const Registration = () => {
   const { createUser, user } = useAuth();
 
   console.log(user);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ const Registration = () => {
     try {
       await createUser(email, password);
       console.log("created");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
