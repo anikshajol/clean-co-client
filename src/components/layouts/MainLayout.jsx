@@ -17,6 +17,7 @@ const MainLayout = ({ children }) => {
       <NavLink to="/about"> About </NavLink>
 
       <NavLink to="/contact"> Contact </NavLink>
+      <NavLink to="/services"> Services </NavLink>
 
       {!user ? (
         <>

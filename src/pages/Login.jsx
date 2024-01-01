@@ -3,11 +3,13 @@ import { AuthContext } from "../Providers/AuthProviders";
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import useAxios from "../hooks/useAxios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, user } = useAuth();
+  const axiosSecure = useAxios();
 
   console.log(user);
   const navigate = useNavigate();
@@ -18,12 +20,15 @@ const Login = () => {
 
     try {
       // toast.login("Logging in");
-      await login(email, password);
-      // console.log("created");
+      const user = await login(email, password);
+      console.log(user);
+      await axiosSecure.post("/auth/access-token", { email: user.user.email });
+
       toast.success("Logged in....", { id: toastID });
       navigate("/");
     } catch (error) {
-      console.log(error.message, { id: toastID });
+      console.log(error.message);
+      toast.error("Login failed", { id: toastID });
     }
 
     console.log(email, password);
