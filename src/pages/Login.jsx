@@ -11,7 +11,7 @@ const Login = () => {
   const { login, user } = useAuth();
   const axiosSecure = useAxios();
 
-  console.log(user);
+  // console.log(user);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ const Login = () => {
     try {
       // toast.login("Logging in");
       const user = await login(email, password);
-      console.log(user);
+      // console.log(user);
       await axiosSecure.post("/auth/access-token", { email: user.user.email });
 
       toast.success("Logged in....", { id: toastID });
