@@ -1,4 +1,5 @@
 const ServiceCard = ({ item }) => {
+  console.log(item);
   return (
     <div>
       <div className="card text-center px-1 pb-1 bg-green-500 shadow-xl">

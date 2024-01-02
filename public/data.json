@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Basic Cleaning",
+    "description": "A thorough cleaning of essential areas in your home or office.",
+    "price": 50.0,
+    "features": ["Dusting", "Vacuuming", "Surface Cleaning"],
+    "category": "General Cleaning"
+  },
+  {
+    "name": "Deep Cleaning",
+    "description": "Comprehensive cleaning targeting hard-to-reach areas and hidden dirt.",
+    "price": 80.0,
+    "features": ["Deep Dusting", "Carpet Shampooing", "Appliance Cleaning"],
+    "category": "Intensive Cleaning"
+  },
+  {
+    "name": "Window Cleaning",
+    "description": "Professional cleaning to make your windows crystal clear.",
+    "price": 30.0,
+    "features": ["Window Washing", "Frame Cleaning", "Streak-Free Finish"],
+    "category": "Specialized Cleaning"
+  },
+  {
+    "name": "Office Cleaning",
+    "description": "Tailored cleaning services for a clean and organized workplace.",
+    "price": 60.0,
+    "features": ["Desk Cleaning", "Trash Removal", "Surface Sanitization"],
+    "category": "Commercial Cleaning"
+  },
+  {
+    "name": "Carpet Cleaning",
+    "description": "Revitalize your carpets with deep cleaning and stain removal.",
+    "price": 40.0,
+    "features": ["Steam Cleaning", "Stain Treatment", "Deodorizing"],
+    "category": "Floor Cleaning"
+  },
+  {
+    "name": "Green Cleaning",
+    "description": "Environmentally-friendly cleaning using eco-friendly products.",
+    "price": 55.0,
+    "features": ["Green Products", "Sustainable Practices", "Allergen-Free"],
+    "category": "Sustainable Cleaning"
+  }
+]

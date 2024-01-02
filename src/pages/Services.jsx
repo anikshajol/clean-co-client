@@ -12,16 +12,11 @@ const Services = () => {
     return res;
   };
 
-  const {
-    data: services,
-    isLoading,
-    isError,
-    error,
-  } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["services"],
     queryFn: getServices,
   });
-  //   console.log(services);
+  console.log(data);
 
   if (isLoading) {
     return (
@@ -46,7 +41,7 @@ const Services = () => {
       </Container>
       <Container className="my-4">
         <div className="grid my-6 grid-cols-3 gap-10">
-          {services.data.map((item) => (
+          {data.data.map((item) => (
             <ServiceCard key={item._id} item={item}></ServiceCard>
           ))}
         </div>
